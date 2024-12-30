@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: redis:bookworm
+    container_name: redis
+    command: bash -c "redis-server --appendonly yes --requirepass admin"
+    ports:
+      - "6379:6379"
+    restart: always
